@@ -1,0 +1,11 @@
+version: '3'
+service:
+    visualizer:
+        image: dockersamples/visualize:stable
+        container_name: swarm-visualizer
+        ports: -8090:8090
+        volumes: -"/var/run/docker.sock:/var/run/docker.sock"
+        deploy:
+            placements:
+                constraints:
+                    - node.role == manager
