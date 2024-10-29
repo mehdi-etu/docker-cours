@@ -1,7 +1,7 @@
 version: '3'
 services:
     visualizer:
-        image: dockersamples/visualize:stable
+        image: dockersamples/visualizer:stable
         container_name: swarm-visualizer
         ports: 
             - "8090:8080"
