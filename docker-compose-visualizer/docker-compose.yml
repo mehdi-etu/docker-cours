@@ -4,9 +4,9 @@ services:
         image: dockersamples/visualize:stable
         container_name: swarm-visualizer
         ports: 
-            -8090:8080
+            - 8090:8080
         volumes:
-            -"/var/run/docker.sock:/var/run/docker.sock"
+            - "/var/run/docker.sock:/var/run/docker.sock"
         deploy:
             placement:
                 constraints:
